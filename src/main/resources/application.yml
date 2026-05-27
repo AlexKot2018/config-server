@@ -1,0 +1,14 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/AlexKot2018/microservices-config-repo
+          default-label: main
+          username: AlexKot2018
+          password: ${CONFIG_GIT_TOKEN}
